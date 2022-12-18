@@ -1,15 +1,15 @@
 [![Version](https://img.shields.io/npm/v/fn-pcg)](https://www.npmjs.com/package/fn-pcg)
-[![Requirements Status](https://requires.io/github/philihp/fast-shuffle/requirements.svg?branch=main)](https://requires.io/github/philihp/fast-shuffle/requirements/?branch=main)
+[![Requirements Status](https://requires.io/github/philihp/fn-pcg/requirements.svg?branch=main)](https://requires.io/github/philihp/fn-pcg/requirements/?branch=main)
 ![Tests](https://github.com/philihp/fn-pcg/workflows/tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/philihp/fn-pcg/badge.svg?branch=main)](https://coveralls.io/github/philihp/fn-pcg?branch=main)
 ![Downloads](https://img.shields.io/npm/dt/fn-pcg)
 ![License](https://img.shields.io/npm/l/fn-pcg)
 
-# Permuted Congruential Generator Generator
+# Functional Permuted Congruential Generator
 
 A permuted congruential generator (PCG) is a pseudorandom number generation algorithm developed in 2014 which applies an output permutation function to improve the statistical properties of a modulo-2^n linear congruential generator. It achieves excellent statistical performance with small and fast code, and small state size. [There are reasons why this might be better.](https://www.pcg-random.org/index.html)
 
-This implementation returns both the random number, and the current state of the generator so it's a pure function. The interface is meant to be a drop-in replacement for [fn-mt](https://www.npmjs.com/package/fn-mt)
+This implementation is a pure, determinstic function that returns both the random number and the current state of the generator. The interface is meant to be a drop-in replacement for [fn-mt](https://www.npmjs.com/package/fn-mt)
 
 ## Install
 
