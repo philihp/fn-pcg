@@ -20,4 +20,16 @@ describe('tests', () => {
     expect(n5).toBeGreaterThanOrEqual(0)
     expect(n5).toBeLessThan(6)
   })
+
+  it('returns numbers within range', () => {
+    expect.assertions(20000)
+    let gen = newRandGen(42)
+
+    for (let i = 0; i < 10000; i++) {
+      const [rand, gen2] = randRange(70, 100, gen)
+      expect(rand).toBeLessThan(100)
+      expect(rand).toBeGreaterThanOrEqual(70)
+      gen = gen2
+    }
+  })
 })

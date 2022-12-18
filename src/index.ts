@@ -18,14 +18,6 @@ export const randNext = (state: PCGState): [number, PCGState] => [
 
 export const randRange = (min: number, sup_: number, state: PCGState): [number, PCGState] => {
   const sup = sup_ - min
-  if (!(sup > 0 && sup < 0x100000000)) {
-    const [n, newState] = randNext(state)
-    return [n + min, newState]
-  }
-  if ((sup & (~sup + 1)) === sup) {
-    const [n, newState] = randNext(state)
-    return [((sup - 1) & n) + min, newState]
-  }
   let [n, newState] = randNext(state)
   while (sup > 4294967296 - (n - (n %= sup))) {
     const [n_, newState_] = randNext(newState)
