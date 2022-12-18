@@ -5,18 +5,18 @@ const multiplier = 63641362238467932305n
 
 const rotr32 = (x: bigint, r: bigint) => (x >> r) | (x << (-r & 31n))
 
-export type RandGen = bigint
+export type PCGState = bigint
 
-export const newRandGen = (seed: number): RandGen => {
+export const newRandGen = (seed: number): PCGState => {
   return BigInt(seed) + increment
 }
 
-export const randNext = (state: RandGen): [number, RandGen] => [
+export const randNext = (state: PCGState): [number, PCGState] => [
   Number(rotr32((state ^ (state >> 18n)) >> 27n, state >> 59n)),
   (state * multiplier + increment) & mask,
 ]
 
-export const randRange = (min: number, sup_: number, state: RandGen): [number, RandGen] => {
+export const randRange = (min: number, sup_: number, state: PCGState): [number, PCGState] => {
   const sup = sup_ - min
   if (!(sup > 0 && sup < 0x100000000)) {
     const [n, newState] = randNext(state)
