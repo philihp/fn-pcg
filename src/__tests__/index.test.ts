@@ -1,18 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { newRandGen, randNext, randRange } from '..'
 
 describe('tests', () => {
   it('passes expectations from demo script', () => {
-    expect.assertions(5)
+    expect.assertions(3)
     const gen = newRandGen(42)
 
     const [n1, gen1] = randNext(gen)
     const [n2, gen2] = randNext(gen1)
     const [n3] = randNext(gen2)
-
-    console.log(n1)
-    console.log(n2)
-    console.log(n3)
 
     // same generator generate same number
     const [n4, gen4] = randNext(gen2)
