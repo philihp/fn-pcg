@@ -33,7 +33,7 @@
     "@philihp/prettier-config": "1.0.0",
     "@tsconfig/node14": "1.0.3",
     "@types/jest": "29.2.2",
-    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "@typescript-eslint/eslint-plugin": "5.47.1",
     "@typescript-eslint/parser": "5.42.1",
     "eslint": "8.27.0",
     "eslint-import-resolver-typescript": "3.5.2",
