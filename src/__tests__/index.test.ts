@@ -21,6 +21,24 @@ describe('tests', () => {
     expect(n5).toBeLessThan(6)
   })
 
+  it('uses the same sequence/stream ID if not specified', () => {
+    expect.assertions(2)
+    const s1 = newRandGen(42)
+    const s2 = newRandGen(42)
+    const s3 = newRandGen(42)
+    expect(s1).toStrictEqual(s2)
+    expect(s2).toStrictEqual(s3)
+  })
+
+  it('states are the same if stream ID is specified', () => {
+    expect.assertions(2)
+    const s1 = newRandGen(42, 1)
+    const s2 = newRandGen(42, 1)
+    const s3 = newRandGen(42, 1)
+    expect(s1).toStrictEqual(s2)
+    expect(s2).toStrictEqual(s3)
+  })
+
   it('returns numbers within range', () => {
     expect.assertions(20000)
     let gen = newRandGen(42)
@@ -46,11 +64,12 @@ describe('tests', () => {
   })
 
   it('returns random numbers', () => {
-    expect.assertions(1)
+    expect.assertions(2)
     const gen0 = newRandGen(12345)
     const [n1, gen1] = randNext(gen0)
     const [n2, gen2] = randNext(gen1)
-    const [n3, _gen3] = randNext(gen2)
-    expect(n1 !== n2 && n2 !== n3).toBeTruthy()
+    const [n3] = randNext(gen2)
+    expect(n1).not.toStrictEqual(n2)
+    expect(n2).not.toStrictEqual(n3)
   })
 })
