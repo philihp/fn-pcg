@@ -33,6 +33,18 @@ describe('tests', () => {
     }
   })
 
+  it('range can have negative numbers', () => {
+    expect.assertions(20000)
+    let gen = newRandGen(42)
+
+    for (let i = 0; i < 10000; i++) {
+      const [rand, gen2] = randRange(-1000, 1000, gen)
+      expect(rand).toBeLessThan(1000)
+      expect(rand).toBeGreaterThanOrEqual(-1000)
+      gen = gen2
+    }
+  })
+
   it('returns random numbers', () => {
     expect.assertions(1)
     const gen0 = newRandGen(12345)
