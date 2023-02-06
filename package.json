@@ -24,7 +24,9 @@
   ],
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "pcg": "0.1.0"
+  },
   "devDependencies": {
     "@babel/cli": "7.20.7",
     "@babel/core": "7.20.12",
