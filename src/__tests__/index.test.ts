@@ -32,4 +32,13 @@ describe('tests', () => {
       gen = gen2
     }
   })
+
+  it('returns random numbers', () => {
+    expect.assertions(1)
+    const gen0 = newRandGen(12345)
+    const [n1, gen1] = randNext(gen0)
+    const [n2, gen2] = randNext(gen1)
+    const [n3, _gen3] = randNext(gen2)
+    expect(n1 !== n2 && n2 !== n3).toBeTruthy()
+  })
 })
