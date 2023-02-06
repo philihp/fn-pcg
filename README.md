@@ -1,5 +1,5 @@
 [![Version](https://img.shields.io/npm/v/fn-pcg)](https://www.npmjs.com/package/fn-pcg)
-[![Requirements Status](https://requires.io/github/philihp/fn-pcg/requirements.svg?branch=main)](https://requires.io/github/philihp/fn-pcg/requirements/?branch=main)
+[![Snyk](https://snyk.io/test/github/philihp/fn-pcg/badge.svg)](https://snyk.io/test/github/philihp/fn-pcg)
 ![Tests](https://github.com/philihp/fn-pcg/workflows/tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/philihp/fn-pcg/badge.svg?branch=main)](https://coveralls.io/github/philihp/fn-pcg?branch=main)
 ![Downloads](https://img.shields.io/npm/dt/fn-pcg)
