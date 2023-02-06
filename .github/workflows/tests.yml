@@ -12,7 +12,8 @@ jobs:
       matrix:
         node-version:
           - 14.x # maintainence ends 2023-04-30
-          - 16.x # maintainence ends 2024-04-30
+          - 19.x # maintainence ends 2023-06-01
+          - 16.x # maintainence ends 2023-09-11
           - 18.x # maintainence ends 2025-04-30
     steps:
       - uses: actions/checkout@v3
