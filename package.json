@@ -25,7 +25,8 @@
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "pcg": "0.1.0"
+    "pcg": "0.1.0",
+    "ramda": "0.28.0"
   },
   "devDependencies": {
     "@babel/cli": "7.20.7",
@@ -35,6 +36,7 @@
     "@philihp/prettier-config": "1.0.0",
     "@tsconfig/node14": "1.0.3",
     "@types/jest": "29.4.0",
+    "@types/ramda": "^0.28.22",
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.50.0",
     "eslint": "8.33.0",
@@ -95,9 +97,8 @@
     },
     "rules": {
       "@typescript-eslint/no-unused-vars": "off",
-      "jest/no-conditional-in-test": "off",
-      "no-cond-assign": "off",
-      "no-conditional-in-test": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "jest/require-hook": "off",
       "no-unused-vars": "off"
     }
   }
